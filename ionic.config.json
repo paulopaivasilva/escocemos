@@ -1,0 +1,7 @@
+{
+  "name": "escocemos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
