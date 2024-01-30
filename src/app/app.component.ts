@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, enableProdMode } from '@angular/core';
+import { defineCustomElements } from '@ionic/pwa-elements/loader'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    defineCustomElements(window)
+    if(environment.production) {
+      enableProdMode()
+    }
+  }
 }
